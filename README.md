@@ -1,5 +1,7 @@
 # Konfundierung: Beobachten ist nicht Eingreifen – Streamlit-Demo
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-konfundierung-demo.streamlit.app/)**
+
 Erstes Stück der Linie **Kausale Diagramme und Adjustierung** in der „Konzepte“-Reihe im Portfolio von [Sebastian Hanisch](https://sebastianhanisch.net) (Operations Research und Machine Learning). Vehikel ist die Welt der Linie *Experimente und Wirkungsmessung*: ein Sicherheitsfaktor der Bestandsregel an Standorten, gemessen am Servicegrad. Dort verteilt eine Münze den Faktor; hier hat ein Disponent ihn nach der Nachfrageschwankung der Standorte vergeben.
 
 ## Kernfrage
@@ -98,4 +100,4 @@ Streamlit Cloud: Python 3.12.
 
 Gebaut mit Streamlit, Plotly, numpy, pandas und fpdf2.
 
-Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zu den Demos: [Interaktive Demos](https://sebastianhanisch.net/demos.html).
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Kausale Diagramme: von Konfundierung bis Wahl](https://sebastianhanisch.net/konzepte-kausale-diagramme.html).
