@@ -84,9 +84,9 @@ def verdict(kind_text):
 st.title("🧭 Konfundierung: Beobachten ist nicht Eingreifen")
 st.markdown(
     """
-**Mehr Daten machen die falsche Antwort nur sicherer.** Dies ist das erste Stück der Linie **Kausale Diagramme und Adjustierung**. Ein Disponent gibt
+**Mehr Daten machen die falsche Antwort hier nur sicherer.** Dies ist das erste Stück der Linie **Kausale Diagramme und Adjustierung**. Ein Disponent gibt
 den **hohen Sicherheitsfaktor** vor allem an Standorten mit stark schwankender Nachfrage, die ohnehin schlechter bedient werden. Vergleicht man danach die
-Servicegrade mit und ohne hohen Faktor, sieht der Faktor schädlich aus, obwohl er hilft. Die Welt ist simuliert; die Simulation kennt die **wahre Wirkung**, weil
+Servicegrade mit und ohne hohen Faktor, sieht der Faktor in der Standardwelt schädlich aus, obwohl er hilft. Die Welt ist simuliert; die Simulation kennt die **wahre Wirkung**, weil
 sie den Faktor auch festsetzen kann, statt ihn zu beobachten. In der Linie **Experimente und Wirkungsmessung** verteilt eine Münze den Faktor; hier tut es der Disponent.
 
 Weiter unten: vier Experimente (**🔬**), **🚧 Wo die Annahmen enden** und der Expander **📐 Mathematische Formulierung**.
@@ -289,7 +289,7 @@ die Wirkung ist der naive Unterschied.
 um $\delta$ verzerrt, sinkt die Deckung mit wachsendem $n$ gegen 0, weil der Standardfehler schrumpft und $\delta$ bleibt.
 
 **Messfehler der Kontrolle.** Mit $Z^* = Z + u$ und Reliabilität $r = \mathrm{Var}(Z)/\mathrm{Var}(Z^*)$ rechnet die Regression von $Y$ auf $X$ und $Z^*$ den Einfluss von
-$Z$ nur zum Anteil $r$ heraus; der Rest bleibt im Koeffizienten von $X$.
+$Z$ nur zu einem Anteil heraus, der kleiner als $r$ ist (maßgeblich ist die Reliabilität innerhalb der Gruppen des Faktors); der Rest bleibt im Koeffizienten von $X$.
 
 **Literatur.** Das Beispiel ist erfunden; die Begriffe (do-Operator, Konfundierung, Simpson-Umkehr) stehen bei J. Pearl, *Causality*, Cambridge University Press 2009,
 und E. H. Simpson, *The interpretation of interaction in contingency tables*, Journal of the Royal Statistical Society B 13, 1951 (aus dem Gedächtnis, nicht geprüft).

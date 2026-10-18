@@ -162,7 +162,7 @@ def verdict_instance(a: Analysis) -> tuple[str, str]:
                 ("info", f"Das Intervall ({de(a.lo, 1)} bis {de(a.hi, 1)}) verfehlt die wahre Wirkung {de(a.truth, 1)}: bei Zufallszuteilung in etwa jedem zwanzigsten Fall zu erwarten."))
     bias = a.limit - a.truth
     if not a.covers:
-        sign = " und zeigt in die falsche Richtung" if a.wrong_sign else ""
+        sign = ", der Punktschätzer zeigt in die falsche Richtung" if a.wrong_sign else ""
         return "warning", (f"Das Intervall ({de(a.lo, 1)} bis {de(a.hi, 1)}) verfehlt die wahre Wirkung {de(a.truth, 1)} Punkte{sign}. Mit mehr Standorten wird es "
                            f"enger um {signed(a.limit, 1)}, nicht richtiger.")
     if abs(bias) > 0.5:
