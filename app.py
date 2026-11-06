@@ -93,6 +93,19 @@ Weiter unten: vier Experimente (**🔬**), **🚧 Wo die Annahmen enden** und de
 """
 )
 
+# erklaerseite:einfach:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/konfundierung-erklaert.json, nicht von Hand ändern)
+with st.expander("💬 In einfachen Worten"):
+    st.markdown(
+        """
+Ein Disponent gibt den **hohen Sicherheitsfaktor** eher an Standorten, deren Nachfrage stark schwankt. Diese Standorte sind ohnehin schlechter bedient. Vergleicht man danach die Servicegrade mit und ohne hohen Faktor, sieht der Faktor schädlich aus, obwohl er in der simulierten Welt hilft.
+
+Der Grund ist eine **gemeinsame Ursache**: Die Schwankung beeinflusst, wer den Faktor bekommt, und wie gut ein Standort bedient wird. Der Vergleich mischt beides. Mehr Daten machen ihn nicht richtiger, nur sicherer. Die Demo kennt die wahre Wirkung, weil sie den Faktor festsetzen kann, und zeigt, wann das Mitrechnen der Schwankung hilft und wann nicht.
+
+[Ausführlich und verständlich erklärt, mit Fachteil](https://sebastianhanisch.net/konfundierung-erklaert.html)
+        """
+    )
+# erklaerseite:einfach:end
+
 with st.expander("So funktioniert Konfundierung", expanded=True):
     st.markdown(
         """
@@ -268,6 +281,26 @@ st.markdown(
 st.markdown("---")
 
 with st.expander("📐 Mathematische Formulierung"):
+    # erklaerseite:lesehilfe:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/konfundierung-erklaert.json, nicht von Hand ändern)
+    st.markdown(
+        r"""
+**Lesehilfe.** Gegeben sind Standorte mit Nachfrageschwankung $Z$, hohem Faktor $X$ und Servicegrad $Y$. Gesucht ist die Wirkung von $X$ auf $Y$, wenn man $X$ festsetzt, und ob der Vergleich der Mittelwerte sie trifft.
+
+| Symbol | Bedeutung |
+|---|---|
+| $Z$ | standardisierte Schwankung der Nachfrage, gemeinsame Ursache von $X$ und $Y$ |
+| $X$ | hoher Sicherheitsfaktor ($1$) oder nicht ($0$) |
+| $Y$ | Servicegrad in Punkten |
+| $\gamma$, $a$, $\eta$ | Auswahlstärke, Schwelle und Zufallsanteil der Zuteilung: $X = 1$ genau dann, wenn $a + \gamma Z + \eta > 0$ |
+| $\beta$, $\tau$, $\sigma$, $\varepsilon$, $b$ | Verlust je Einheit Schwankung, wahre Wirkung des Faktors, Reststreuung, Zufallsanteil, Basiswert des Servicegrads |
+| $\mathrm{do}(X=x)$ | der Faktor wird auf $x$ festgesetzt statt beobachtet |
+| $\varphi$, $\Phi$, $c$ | Dichte und Verteilungsfunktion der Standardnormalverteilung, $c = -a/\sqrt{1+\gamma^2}$ |
+| $Z^*$, $r$ | mit Messfehler beobachtete Schwankung und ihre Reliabilität |
+
+[Schritt für Schritt erklärt, mit Herleitung und Literatur](https://sebastianhanisch.net/konfundierung-erklaert.html#fachleute)
+        """
+    )
+    # erklaerseite:lesehilfe:end
     st.markdown(
         r"""
 **Modell (Diagramm A).** Die Schwankung $Z \sim N(0,1)$ ist die gemeinsame Ursache. Der hohe Faktor $X \in \{0,1\}$ gilt genau dann, wenn
