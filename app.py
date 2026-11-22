@@ -324,7 +324,7 @@ um $\delta$ verzerrt, sinkt die Deckung mit wachsendem $n$ gegen 0, weil der Sta
 **Messfehler der Kontrolle.** Mit $Z^* = Z + u$ und Reliabilität $r = \mathrm{Var}(Z)/\mathrm{Var}(Z^*)$ rechnet die Regression von $Y$ auf $X$ und $Z^*$ den Einfluss von
 $Z$ nur zu einem Anteil heraus, der kleiner als $r$ ist (maßgeblich ist die Reliabilität innerhalb der Gruppen des Faktors); der Rest bleibt im Koeffizienten von $X$.
 
-**Literatur.** Das Beispiel ist erfunden; die Begriffe (do-Operator, Konfundierung, Simpson-Umkehr) stehen bei J. Pearl, *Causality*, Cambridge University Press 2009,
+**Literatur.** Das Beispiel ist erfunden; die Begriffe (do-Operator, Konfundierung, Simpson-Paradoxon) stehen bei J. Pearl, *Causality*, Cambridge University Press 2009,
 und E. H. Simpson, *The interpretation of interaction in contingency tables*, Journal of the Royal Statistical Society B 13, 1951 (aus dem Gedächtnis, nicht geprüft).
         """
     )

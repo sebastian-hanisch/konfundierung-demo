@@ -20,7 +20,7 @@ Die Wahrheit ist die Wirkung beim Festsetzen von X (do-Operator): im linearen Mo
 
 ## Methodik
 
-- **Geschlossene Form des naiven Unterschieds:** τ − β·(E[Z | X=1] − E[Z | X=0]) mit den abgeschnittenen Normalmitteln (inverse Mills-Quote). Der Grenzwert hängt nicht von n ab.
+- **Geschlossene Form des naiven Unterschieds:** τ − β·(E[Z | X=1] − E[Z | X=0]) mit den abgeschnittenen Normalmitteln (inverse Mills-Ratio). Der Grenzwert hängt nicht von n ab.
 - **Schätzer:** Welch-Unterschied der Mittelwerte; Regression von Y auf X und Z (Normalgleichungen, vektorisiert über Wiederholungen); 95-%-Intervall in Normalnäherung.
 - **Zweites Diagramm:** dieselbe gemeinsame Verteilung von (Z, X, Y) auf anderem Weg (erst X, dann Z aus seinem Gesetz gegeben X, dann Y); Kolmogorov-Smirnov-Tests auf Z | X und Y | X.
 - **Experimente** laufen über feste Zufallsströme (SplitMix64): Experiment 1 und 2: 400 Wiederholungen je Zelle; Experiment 3: 12 Läufe; Experiment 4: eine große Stichprobe (n = 100 000). Die Standard-Stichprobe ist bewusst ein einzelner Seed.
@@ -41,7 +41,7 @@ Standardwelt (γ = 1, β = 4, τ = 3,5, σ = 5), wenn nicht anders genannt. Jede
 | Falsches Vorzeichen bei n = 200 | 86 % (γ = 1, β = 4), 6 % (γ = 1, β = 2), 18 % (γ = 2, β = 2), 22 % (γ = 0,5, β = 4), ab γ = 2, β = 4 praktisch immer. | `test_experiment_2_wrong_sign_shares_at_two_hundred_sites` |
 | Gibt es ein zweites Diagramm mit denselben Daten? | Ja: Faktor → Schwankung → Servicegrad. Von 48 Tests auf gleiche Verteilung liegen 5 unter 0,05 (kleinster p-Wert 0,003); bei gleicher Verteilung sind rund 5 % zu erwarten; die 5 von 48 (10 %) liegen im Rahmen der Zufallsschwankung, weil die Tests je Lauf voneinander abhängen. In Diagramm B ist der naive Unterschied die Wahrheit (−1,01), in Diagramm A ist es +3,5. | `test_experiment_3_forty_eight_tests_and_the_two_truths` |
 | Hilft eine verrauschte Kontrolle? | Nur teilweise. Reliabilität 0,9: Schätzung 2,82, 15 % des Fehlers bleiben; 0,5: 0,74 (60 %); 0,2: −0,41 (86 %). | `test_experiment_4_remaining_error_by_reliability` |
-| Überlappung | Bei γ = 1 hat ein Standort mit Schwankung −2 nur 2,3 % Wahrscheinlichkeit auf den hohen Faktor, bei γ = 2 rund 0,003 %. | `test_overlap_numbers_of_the_assumptions_table` |
+| Überlappung (Overlap, Positivity) | Bei γ = 1 hat ein Standort mit Schwankung −2 nur 2,3 % Wahrscheinlichkeit auf den hohen Faktor, bei γ = 2 rund 0,003 %. | `test_overlap_numbers_of_the_assumptions_table` |
 | Mini-Instanz von Hand | 16 Standorte in zwei Gruppen: naiv −0,75, je Gruppe +4 und +5, standardisiert +4,5. | `test_mini_instance_naive_difference_and_group_means`, `test_mini_instance_effects_within_groups_and_standardized_difference` |
 
 ## Ehrliche Grenzen

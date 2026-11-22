@@ -20,7 +20,7 @@ def p_treated(gamma: float, a: float = C.THRESHOLD_A) -> float:
 
 def mean_z_given_x(gamma: float, a: float = C.THRESHOLD_A) -> tuple[float, float]:
     """(E[Z | X=0], E[Z | X=1]) geschlossen. S = a + gamma*Z + eta ist N(a, 1+gamma^2), X = [S > 0], E[Z | S] = gamma*(S-a)/(1+gamma^2);
-    der Mittelwert von S über der Schwelle ist der abgeschnittene Normalmittelwert (inverse Mills-Quote)."""
+    der Mittelwert von S über der Schwelle ist der abgeschnittene Normalmittelwert (inverse Mills-Ratio)."""
     v = 1.0 + gamma ** 2
     c = -a / math.sqrt(v)
     upper = float(normal_pdf(c) / (1.0 - normal_cdf(c)))
